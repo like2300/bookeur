@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "Montre Connectée",
+    "description": "Montre intelligente avec suivi de santé et notifications",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "2",
+    "name": "Écouteurs Sans Fil",
+    "description": "Écouteurs Bluetooth avec réduction de bruit",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1572569028738-411a29639581?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "3",
+    "name": "Sac à Dos Urbain",
+    "description": "Sac à dos moderne pour ordinateur portable",
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+    "category": "Accessoires"
+  },
+  {
+    "id": "4",
+    "name": "Lampe de Bureau LED",
+    "description": "Lampe ajustable avec chargeur sans fil intégré",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1534073828943-f801091a7d58?w=400&h=400&fit=crop",
+    "category": "Maison"
+  },
+  {
+    "id": "5",
+    "name": "Casque Audio Premium",
+    "description": "Casque circum-aural avec son haute fidélité",
+    "price": 400,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "6",
+    "name": "Batterie Externe 20000mAh",
+    "description": "Chargeur portable rapide avec double USB",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1609592425066-9b8b4a6f9b8d?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "7",
+    "name": "Tapis de Yoga",
+    "description": "Tapis antidérapant pour fitness et yoga",
+    "price": 230,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop",
+    "category": "Sport"
+  },
+  {
+    "id": "8",
+    "name": "Gourde Isotherme",
+    "description": "Bouteille en acier inoxydable 750ml",
+    "price": 210,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=400&fit=crop",
+    "category": "Sport"
+  },
+  {
+    "id": "9",
+    "name": "Support Téléphone Voiture",
+    "description": "Support magnétique pour tableau de bord",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=400&h=400&fit=crop",
+    "category": "Accessoires"
+  },
+  {
+    "id": "10",
+    "name": "Clavier Mécanique RGB",
+    "description": "Clavier gaming avec switches bleus",
+    "price": 380,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "11",
+    "name": "Souris Ergonomique",
+    "description": "Souris verticale sans fil pour confort optimal",
+    "price": 260,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  },
+  {
+    "id": "12",
+    "name": "Enceinte Bluetooth",
+    "description": "Haut-parleur portable étanche 360°",
+    "price": 320,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    "category": "Électronique"
+  }
+]
