@@ -2,9 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const OPENPAY_API_KEY = 'sk_88c2ed0aedaec198b1f258aab3ad436afcb8997b86f080477a3f6edeefc9f875';
+// Utiliser la variable d'environnement Vercel ou la clé par défaut
+const OPENPAY_API_KEY = process.env.OPENPAY_API_KEY || 'sk_88c2ed0aedaec198b1f258aab3ad436afcb8997b86f080477a3f6edeefc9f875';
 
-const server = http.createServer((req, res) => {
+// Fonction handler pour Vercel Serverless
+module.exports = (req, res) => {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -165,17 +167,20 @@ const server = http.createServer((req, res) => {
       res.end(content);
     }
   });
-});
+};
 
-const PORT = 3000;
-server.listen(PORT, () => {
-  console.log('\n' + '='.repeat(50));
-  console.log('🚀 SERVER BOOKER - E-COMMERCE');
-  console.log('='.repeat(50));
-  console.log(`📡 Server running at: http://localhost:${PORT}`);
-  console.log(`💳 OpenPay payment: POST http://localhost:${PORT}/api/payment`);
-  console.log(`🔍 Check status:  GET  http://localhost:${PORT}/api/status/:referenceId`);
-  console.log(`🔑 API Key configured: ${OPENPAY_API_KEY.substring(0, 8)}...`);
-  console.log('='.repeat(50));
-  console.log('\n📝 Waiting for requests...\n');
-});
+// Server local pour développement uniquement
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const PORT = 3000;
+  http.createServer(module.exports).listen(PORT, () => {
+    console.log('\n' + '='.repeat(50));
+    console.log('🚀 SERVER BOOKER - E-COMMERCE');
+    console.log('='.repeat(50));
+    console.log(`📡 Server running at: http://localhost:${PORT}`);
+    console.log(`💳 OpenPay payment: POST http://localhost:${PORT}/api/payment`);
+    console.log(`🔍 Check status:  GET  http://localhost:${PORT}/api/status/:referenceId`);
+    console.log(`🔑 API Key configured: ${OPENPAY_API_KEY.substring(0, 8)}...`);
+    console.log('='.repeat(50));
+    console.log('\n📝 Waiting for requests...\n');
+  });
+}

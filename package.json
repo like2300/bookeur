@@ -1,0 +1,22 @@
+{
+  "name": "booker-openpay",
+  "version": "1.0.0",
+  "description": "Application de paiement OpenPay - Level 20 Unlocked",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "openpay",
+    "payment",
+    "mtn",
+    "congo",
+    "mobile-money"
+  ],
+  "author": "Elenga Omer Fils",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.x"
+  }
+}
