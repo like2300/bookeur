@@ -1,22 +1,28 @@
 {
   "name": "booker-openpay",
   "version": "1.0.0",
-  "description": "Application de paiement OpenPay - Level 20 Unlocked",
-  "main": "server.js",
+  "description": "Application de paiement OpenPay Congo - MTN Mobile Money",
+  "main": "api/payment.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "echo 'No build required - static files'"
   },
   "keywords": [
     "openpay",
     "payment",
     "mtn",
     "congo",
-    "mobile-money"
+    "mobile-money",
+    "xaf"
   ],
-  "author": "Elenga Omer Fils",
+  "author": "Elenga Omer Fils <061952417>",
   "license": "MIT",
   "engines": {
     "node": ">=18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omerlinks/booker"
   }
 }

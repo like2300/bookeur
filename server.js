@@ -3,8 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Utiliser la variable d'environnement Vercel ou la clé par défaut
-const OPENPAY_API_KEY = process.env.OPENPAY_API_KEY || 'sk_88c2ed0aedaec198b1f258aab3ad436afcb8997b86f080477a3f6edeefc9f875';
-
+const OPENPAY_API_KEY = process.env.OPENPAY_API_KEY
 // Fonction handler pour Vercel Serverless
 module.exports = (req, res) => {
   // Enable CORS

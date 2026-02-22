@@ -18,13 +18,13 @@ git init
 git add .
 
 # Premier commit
-git commit -m "🎉 Initial commit - Booker OpenPay"
+git commit -m "🎉 Ready for Vercel deployment"
 
 # Créer la branche main
 git branch -M main
 
-# Ajouter le remote (remplace TON_USERNAME par ton pseudo GitHub)
-git remote add origin https://github.com/TON_USERNAME/booker.git
+# Ajouter le remote (remplace omerlinks par ton pseudo GitHub)
+git remote add origin https://github.com/omerlinks/booker.git
 
 # Pousser le code
 git push -u origin main
@@ -90,6 +90,7 @@ vercel --prod
 
 ```bash
 vercel env add OPENPAY_API_KEY sk_88c2ed0aedaec198b1f258aab3ad436afcb8997b86f080477a3f6edeefc9f875
+vercel --prod
 ```
 
 ---
@@ -104,13 +105,14 @@ vercel env add OPENPAY_API_KEY sk_88c2ed0aedaec198b1f258aab3ad436afcb8997b86f080
 
 ---
 
-## ✅ Vérification
+## ✅ Vérification après déploiement
 
-Après déploiement :
-
-1. Ouvre l'URL fournie par Vercel
-2. Teste un paiement
-3. Vérifie les logs dans le dashboard Vercel
+1. **Ouvre** l'URL fournie par Vercel (ex: `https://booker-xxx.vercel.app`)
+2. **Teste** un paiement avec :
+   - Nom : `Test`
+   - Numéro : `061234567`
+   - Montant : `100`
+3. **Vérifie** les logs dans le dashboard Vercel
 
 ---
 
@@ -121,7 +123,7 @@ Après déploiement :
 vercel ls
 
 # Voir les logs
-vercel logs
+vercel logs <deployment-url>
 
 # Supprimer un déploiement
 vercel rm <deployment-url>
@@ -135,13 +137,32 @@ vercel rollback
 ## 🆘 Problèmes courants
 
 ### Erreur : "API Key not found"
-→ Ajoute la variable `OPENPAY_API_KEY` dans Vercel Dashboard
+→ Ajoute la variable `OPENPAY_API_KEY` dans Vercel Dashboard → Settings → Environment Variables
+
+### Erreur : "404 Not Found" sur /api/payment
+→ Vérifie que le dossier `api/` existe avec `payment.js` et `status.js`
 
 ### Erreur : "CORS"
-→ Vérifie que tu utilises `/api/payment` (pas l'URL directe)
+→ Les fonctions API dans `api/` gèrent déjà le CORS automatiquement
 
-### Erreur : "404 Not Found"
-→ Vérifie que `vercel.json` est présent
+### Site ne charge pas
+→ Vérifie que `index.html` existe à la racine du projet
+
+---
+
+## 📁 Structure du projet
+
+```
+booker/
+├── api/
+│   ├── payment.js    # Endpoint /api/payment
+│   └── status.js     # Endpoint /api/status/:id
+├── index.html        # Page principale
+├── server.js         # Serveur local (dev only)
+├── vercel.json       # Configuration Vercel
+├── package.json      # Métadonnées
+└── README.md         # Documentation
+```
 
 ---
 
